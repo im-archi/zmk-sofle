@@ -409,18 +409,19 @@
         };
 
         /* ==================================================================
-         * LAYER 1 — NAV / NUM
-         *   Left hand: PgUp/PgDn, mirror mods, clipboard (Cut/Copy/Dup/Paste/Undo).
-         *   Right hand: numpad (7 8 9 / 4 5 6 / 1 2 3) + operators (+ - * =).
+         * LAYER 1 — NAV
+         *   Mirrors kanata.kbd nav layer:
+         *   - Left hand: Numpad (1-9), mouse clicks (L/M/R), Cut/Copy/Dup
+         *   - Right hand: PgUp/PgDn, mods (Shift/GUI/Alt/Ctrl), Return, +, *
          * ================================================================== */
         nav_layer {
             display-name = "NAV";
             bindings = <
-&kp F12     &kp F1   &kp F2  &kp F3      &kp F4      &kp F5      TB_U     &kp F6      &kp F7     &kp F8     &kp F9     &kp F10     &kp F11
-&trans     &trans      &mkp LCLK   &mkp MCLK   &mkp RCLK      &trans      TB_D     &kp MINUS   &kp N7     &kp N8     &kp N9     &kp MINUS   &kp ASTRK
-&trans     LMODS                                           &trans      TB_L     &kp N0      &kp N4     &kp N5     &kp N6     &kp PLUS    &kp EQUAL
-&trans     &kp LC(X)   &kp LC(C)   &kp LC(D)   &kp PG_DN   &kp PG_UP   TB_R     &kp ENTER   &kp N1     &kp N2     &kp N3     &trans      &trans
-&trans     &trans      &trans      &trans      &trans      &trans      TB_CLK   &trans      &kp DOT    &kp COMMA  &trans     &trans
+&kp F12     &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      TB_U     &kp F6      &kp F7      &kp F8      &kp F9      &kp F10     &kp F11
+&trans      &kp N1      &kp N2      &kp N3      &mkp LCLK   &mkp MCLK   TB_D     &mkp RCLK   &kp PG_UP   &kp PG_DN   &trans      &kp MINUS   &kp ASTRK
+&trans      &kp N4      &kp N5      &kp N6      &kp N0      &trans      TB_L     &trans      &kp RSHFT   &kp RGUI    &kp RALT    &kp RCTRL   &kp PLUS
+&trans      &kp N7      &kp N8      &kp N9      &trans      &kp LC(C)   TB_R     &kp LC(D)   &kp ENTER   &trans      &trans      &trans      &trans
+&trans      &trans      &kp LC(X)   &trans      &trans      &trans      TB_CLK   &trans      &trans      &kp DOT     &kp COMMA   &trans
             >;
             sensor-bindings = <&scroll_encoder>;
         };
